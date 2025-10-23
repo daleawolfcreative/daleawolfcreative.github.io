@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalea Wolf Creative</title>
   <link rel="icon" href="LOGO DWC.jpg" type="image/jpeg">
+  
+  <!-- Font Shrikhand -->
+  <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
     body { background-color: #000; color: #fff; line-height: 1.6; scroll-behavior: smooth; }
     a { color: #ff0000; text-decoration: none; }
-    img { max-width: 100%; }
+    img { max-width: 100%; display:block; }
 
     header {
       display: flex;
@@ -26,6 +30,7 @@
     }
 
     header h1 {
+      font-family: 'Shrikhand', cursive;
       font-size: 3rem;
       color: #ff0000;
       margin-bottom: 20px;
@@ -56,6 +61,7 @@
     section { padding: 60px 20px; text-align: center; }
 
     h2 {
+      font-family: 'Shrikhand', cursive;
       font-size: 2rem;
       color: #ff0000;
       margin-bottom: 40px;
@@ -64,14 +70,14 @@
       padding-bottom: 5px;
     }
 
-    .services-grid {
+    .services-grid, .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
       margin-top: 40px;
     }
 
-    .service-card {
+    .service-card, .project-card {
       border: 2px solid #ff0000;
       padding: 20px;
       border-radius: 10px;
@@ -80,15 +86,18 @@
       text-align: left;
     }
 
-    .service-card:hover { transform: scale(1.05); }
+    .service-card:hover, .project-card:hover { transform: scale(1.05); }
 
-    .service-card h3 {
+    .service-card h3, .project-card h3 {
+      font-family: 'Shrikhand', cursive;
       color: #fff;
       margin-bottom: 15px;
       font-size: 1.2rem;
     }
 
-    .service-card p { color: #fff; font-size: 0.95rem; }
+    .service-card p, .project-card p { color: #fff; font-size: 0.95rem; }
+
+    .project-card img { border-radius: 5px; margin-bottom: 10px; }
 
     form {
       display: flex;
@@ -182,7 +191,49 @@
       </div>
       <div class="service-card">
         <h3>🔹 CONTENT CREATOR — de la 1200 lei</h3>
-        <p>Serviciu complet și personalizat pentru fiecare brand, firmă sau persoană. Se realizează pachete individuale sau personalizate, în funcție de nevoi — de la conținut vizual, foto-video și branding, până la strategii de imagine și idei originale. Totul este creat de la zero, special pentru tine — unic, autentic și adaptat stilului tău.</p>
+        <p>Serviciu complet și personalizat pentru fiecare brand, firmă sau persoană. Pachete disponibile: Basic Social Pack, Creator Pack, Full Brand Pack, Wolf Signature Pack. Se realizează pachete individuale sau personalizate, în funcție de nevoi — de la conținut vizual, foto-video și branding, până la strategii de imagine și idei originale. Totul este creat de la zero, special pentru tine — unic, autentic și adaptat stilului tău.</p>
+      </div>
+      <div class="service-card">
+        <h3>🔹 CREARE SITE — de la 1750 lei</h3>
+        <p>Realizăm site-uri personalizate, moderne și responsive. Include pagină principală, secțiuni: Acasă, Servicii, Contact, logo și link-uri sociale, plus formular de contact funcțional, palete de culori la alegere. Tipuri pachete: DWC Start, DWC Business, DWC Brand Full, DWC Premium.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROIECTE REALIZATE -->
+  <section id="projects">
+    <h2>Proiecte Realizate</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="LUVET LOGO.png" alt="LUVET FRENCH - Salon&Academy">
+        <h3>LUVET FRENCH - Salon&Academy</h3>
+        <p>Domeniu: NAILS</p>
+        <p>Serviciu oferit: Content creator / Creare site / Creare Logo</p>
+        <p>Locație: Bistrita</p>
+      </div>
+      <div class="project-card">
+        <img src="CLIENT 1.jpg" alt="Ghiulgian Adin">
+        <h3>Ghiulgian Adin</h3>
+        <p>Serviciu oferit: Content creator</p>
+        <p>Locație: Bistrita</p>
+      </div>
+      <div class="project-card">
+        <img src="CLIENT 2.jpg" alt="LUXE ACADEMY">
+        <h3>LUXE ACADEMY - Salon&Academy</h3>
+        <p>Domeniu: BARBERSHOP</p>
+        <p>Serviciu oferit: Content creator / Video / Edit</p>
+        <p>Locație: Oradea</p>
+      </div>
+      <div class="project-card">
+        <img src="CLIENT 3.jpg" alt="AnneArtista">
+        <h3>AnneArtista</h3>
+        <p>Serviciu oferit: Editare Video</p>
+        <p>Locație: Mioveni</p>
+      </div>
+      <div class="project-card">
+        <img src="CLIENT 4.jpg" alt="MASINI & MOTOARE">
+        <h3>MASINI & MOTOARE</h3>
+        <p>Serviciu oferit: Editare Video</p>
       </div>
     </div>
   </section>
@@ -209,3 +260,4 @@
 
 </body>
 </html>
+
