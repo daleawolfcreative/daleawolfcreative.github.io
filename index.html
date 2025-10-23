@@ -9,7 +9,7 @@
   <!-- Font Shrikhand -->
   <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 * { margin:0; padding:0; box-sizing:border-box; font-family: 'Arial', sans-serif; }
 body { background-color: #000; color: #fff; line-height: 1.6; scroll-behavior: smooth; }
 a { color: #ff0000; text-decoration: none; }
@@ -109,13 +109,13 @@ h2 {
 
 .service-card p, .project-card p { color: #fff; font-size: 0.95rem; }
 
-/* Proiecte imagini cu dimensiuni fixe pe desktop */
+/* Proiecte imagini mici pe desktop, responsive pe mobil */
 .project-card img {
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 100%;
-  max-height: 200px; /* limitează înălțimea */
-  object-fit: cover;
+  width: auto;       /* păstrează lățimea naturală pe desktop */
+  max-width: 100%;   /* nu depășește containerul */
+  height: auto;      /* păstrează proporțiile */
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -206,6 +206,7 @@ footer {
   #services .services-grid, #projects .projects-grid { grid-template-columns: 1fr; }
 }
 </style>
+
 
 </head>
 <body>
