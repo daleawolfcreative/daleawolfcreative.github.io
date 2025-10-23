@@ -79,15 +79,6 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-#services .services-grid .service-card:nth-child(4),
-#services .services-grid .service-card:nth-child(5) {
-  grid-column: span 1;
-}
-#services .services-grid .service-card:nth-child(6),
-#services .services-grid .service-card:nth-child(7) {
-  grid-column: span 1;
-}
-
 /* Proiecte 2-1-2 pe desktop */
 #projects .projects-grid {
   grid-template-columns: repeat(2, 1fr);
@@ -118,9 +109,13 @@ h2 {
 
 .service-card p, .project-card p { color: #fff; font-size: 0.95rem; }
 
+/* Proiecte imagini cu dimensiuni fixe pe desktop */
 .project-card img {
   border-radius: 5px;
   margin-bottom: 10px;
+  width: 100%;
+  max-height: 200px; /* limitează înălțimea */
+  object-fit: cover;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -201,7 +196,8 @@ footer {
 
 /* Responsive */
 @media(max-width:1024px){
-  #services .services-grid, #projects .projects-grid { grid-template-columns: 1fr 1fr; }
+  #services .services-grid { grid-template-columns: 1fr 1fr; }
+  #projects .projects-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media(max-width:768px){
