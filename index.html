@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dalea Wolf Creative</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Montserrat',sans-serif;}
+    body{background:#fff;color:#000;scroll-behavior:smooth;}
+    a{text-decoration:none;color:inherit;}
+    nav{
+      position:fixed;top:0;left:0;width:100%;background:#000;color:#fff;
+      padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;z-index:1000;
+    }
+    nav a{margin-left:1.5rem;color:#fff;font-weight:500;}
+    nav a:hover{color:#f00;}
+    section{min-height:100vh;padding:100px 20px 60px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
+    h1,h2{margin-bottom:1rem;}
+    h1{font-size:3rem;color:#f00;}
+    h2{font-size:2rem;margin-bottom:2rem;}
+    p{max-width:800px;line-height:1.6;}
+    .btn{background:#f00;color:#fff;padding:0.7rem 1.5rem;border:none;cursor:pointer;font-weight:bold;transition:0.3s;}
+    .btn:hover{background:#fff;color:#f00;border:1px solid #f00;}
+    #home img{height:100px;margin-bottom:20px;}
+    #services{background:#000;color:#fff;}
+    .services-container{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem;}
+    .service{background:#111;color:#fff;padding:2rem;border-radius:10px;flex:1 1 250px;max-width:300px;text-align:center;}
+    .service h3{margin-bottom:1rem;color:#f00;}
+    #contact{background:#000;color:#fff;}
+    form{display:flex;flex-direction:column;gap:1rem;width:100%;max-width:500px;}
+    input,textarea{padding:0.7rem;border-radius:5px;border:none;}
+    input:focus,textarea:focus{outline:2px solid #f00;}
+    textarea{resize:none;min-height:120px;}
+    .socials{display:flex;gap:2rem;margin-top:2rem;flex-wrap:wrap;justify-content:center;}
+    .socials a{color:#f00;font-weight:bold;font-size:1.2rem;transition:0.3s;}
+    .socials a:hover{color:#fff;}
+    footer{text-align:center;padding:2rem;background:#111;color:#fff;}
+    @media(max-width:768px){h1{font-size:2.2rem;}nav{flex-direction:column;gap:0.5rem;}}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo"><img src="LOGO DWC.jpg" alt="Dalea Wolf Creative" style="height:50px;"></div>
+    <div>
+      <a href="#home">Acasă</a>
+      <a href="#services">Servicii</a>
+      <a href="proiecte.html">Proiecte</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="home">
+    <img src="LOGO DWC.jpg" alt="Dalea Wolf Creative logo">
+    <h1>DALEA WOLF CREATIVE</h1>
+    <p>Design, Video, Edit, Photo</p>
+    <p>Dalea Wolf Creative este un studio independent de design și conținut digital. 
+       Misiunea noastră este să transformăm ideile clienților în identități vizuale autentice și memorabile.
+       Lucrăm cu pasiune, creativitate și atenție la detalii, pentru ca fiecare brand să iasă în evidență.</p>
+    <a href="#contact" class="btn">Contactează-ne</a>
+  </section>
+
+  <section id="services">
+    <h2>Serviciile Noastre</h2>
+    <div class="services-container">
+      <div class="service">
+        <h3>🔹 LOGO DESIGN — de la 100 lei</h3>
+        <p>Creare logo personalizat pentru brandul tău, în stil modern. 
+           Mai multe variante de logo-uri adaptate nevoilor și identității vizuale.</p>
+      </div>
+      <div class="service">
+        <h3>🔹 BANNERE & POSTĂRI — de la 100 lei</h3>
+        <p>Design creativ, perfect pentru social media, afișe, evenimente sau reclame. 
+           Disponibile individual sau în pachete lunare personalizate.</p>
+      </div>
+      <div class="service">
+        <h3>🔹 CĂRȚI DE VIZITĂ — de la 100 lei</h3>
+        <p>Design profesional, pregătit pentru tipar, potrivit oricărui stil de brand.</p>
+      </div>
+      <div class="service">
+        <h3>🔹 EDIT — de la 100 lei</h3>
+        <p>Editare foto și video atentă la detalii, potrivită fiecărui client, 
+           disponibilă individual sau în pachete pentru branduri și freelanceri.</p>
+      </div>
+      <div class="service">
+        <h3>🔹 FILMARE & EDITARE — de la 180 lei</h3>
+        <p>Filmare și montaj complet, ideal pentru prezentări de brand, social media sau reclame.</p>
+      </div>
+      <div class="service">
+        <h3>🔹 CONTENT CREATOR — de la 1200 lei</h3>
+        <p>Pachete personalizate de conținut vizual, foto-video și branding. 
+           Totul creat de la zero, special pentru tine — unic și autentic.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Nume" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Mesajul tău" required></textarea>
+      <button type="submit" class="btn">Trimite mesajul</button>
+    </form>
+    <div class="socials">
+      <a href="https://www.instagram.com/dalea.a10/" target="_blank">Instagram Personal</a>
+      <a href="https://www.instagram.com/dalea_wolf_creative/" target="_blank">Instagram Business</a>
+      <a href="https://www.facebook.com/profile.php?id=61581763182903" target="_blank">Facebook</a>
+    </div>
+    <p>Email: daleawolfcreative@yahoo.com</p>
+    <p>Telefon: +40745654577</p>
+    <p>Locație: Timișoara, România</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Dalea Wolf Creative. Toate drepturile rezervate.
+  </footer>
+</body>
+</html>
