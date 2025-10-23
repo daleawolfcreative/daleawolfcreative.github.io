@@ -4,144 +4,191 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dalea Wolf Creative</title>
-  <!-- Favicon: pune logo-ul tău aici -->
-  <link rel="icon" href="LOGO DWC.jpg" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="LOGO DWC.jpg" type="image/jpeg">
   <style>
-    * {margin:0; padding:0; box-sizing:border-box;}
-    html {scroll-behavior: smooth;}
-    body {font-family:'Montserrat',sans-serif; background:#fff; color:#111;}
+    /* Reset simplu */
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+
+    /* Culori brand */
+    :root {
+      --primary-red: #FF0000;
+      --primary-white: #FFFFFF;
+      --primary-black: #000000;
+    }
+
+    body {
+      background-color: var(--primary-black);
+      color: var(--primary-white);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary-red); text-decoration: none; }
 
     header {
-      position: fixed; top:0; left:0; width:100%; z-index:999;
-      background:#000; color:#fff; display:flex; justify-content:space-between; align-items:center;
-      padding:15px 10%; box-shadow:0 2px 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 50px;
+      border-bottom: 2px solid var(--primary-red);
     }
-    header h1 {color:#e50914; font-size:1.8em;}
-    nav a {color:#fff; margin-left:20px; font-weight:500; text-transform:uppercase; transition:0.3s;}
-    nav a:hover {color:#e50914;}
-    .menu-toggle {display:none; cursor:pointer; font-size:1.5em;}
 
-    section {padding:100px 10%; min-height:100vh; display:flex; flex-direction:column; justify-content:center;}
-    #hero {
-      background:url('https://images.unsplash.com/photo-1593642532871-8b12e02d091c?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-      height:80vh; color:#fff; text-align:center; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    header img { height: 60px; }
+
+    nav a {
+      margin-left: 30px;
+      font-weight: bold;
     }
-    #hero h2 {font-size:2.8em; margin-bottom:15px; text-shadow:0 0 15px rgba(0,0,0,0.6);}
-    #hero p {font-size:1.2em; max-width:600px; margin:0 auto 20px auto;}
-    #hero a {background:#e50914; padding:12px 28px; border-radius:30px; font-weight:bold; transition:0.3s;}
-    #hero a:hover {background:#b0070f;}
 
-    h2 {text-align:center; color:#e50914; margin-bottom:30px; font-size:2.2em; text-transform:uppercase;}
-    p {line-height:1.6; max-width:800px; margin:0 auto; font-size:1.1em;}
-
-    .services-grid, .portfolio-grid {display:grid; gap:25px;}
-    .services-grid {grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); margin-top:30px;}
-    .service {
-      background:#111; color:#fff; padding:25px; border-radius:15px; text-align:center; transition:0.3s;
+    section {
+      padding: 80px 50px;
+      border-bottom: 2px solid var(--primary-red);
     }
-    .service:hover {background:#e50914; transform:translateY(-5px);}
-    .service h3 {margin-bottom:15px;}
 
-    .portfolio-grid {grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); margin-top:20px;}
-    .portfolio-item {overflow:hidden; border-radius:10px; transition:0.3s;}
-    .portfolio-item img, .portfolio-item video {width:100%; display:block; transition:0.3s;}
-    .portfolio-item:hover img, .portfolio-item:hover video {transform:scale(1.05);}
-
-    #contact form {max-width:600px; margin:0 auto; display:flex; flex-direction:column; gap:15px;}
-    #contact input, #contact textarea {padding:12px; border:2px solid #e50914; border-radius:8px; outline:none;}
-    #contact button {
-      background:#e50914; color:#fff; padding:12px; border:none; border-radius:8px; font-weight:bold; cursor:pointer; transition:0.3s;
+    h2 {
+      color: var(--primary-red);
+      margin-bottom: 20px;
+      border-bottom: 2px solid var(--primary-red);
+      display: inline-block;
+      padding-bottom: 5px;
     }
-    #contact button:hover {background:#b0070f;}
 
-    footer {background:#000; color:#fff; text-align:center; padding:20px; font-size:0.9em;}
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
 
-    @media(max-width:768px) {
-      nav {display:none; flex-direction:column; background:#000; position:absolute; top:60px; left:0; width:100%; padding:15px 0;}
-      nav a {margin:15px 0;}
-      .menu-toggle {display:block; color:#fff;}
+    .card {
+      background-color: var(--primary-black);
+      border: 2px solid var(--primary-red);
+      padding: 20px;
+      border-radius: 10px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: scale(1.05); }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      border-top: 2px solid var(--primary-red);
+    }
+
+    /* Formular */
+    form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 2px solid var(--primary-red);
+      border-radius: 5px;
+      background-color: var(--primary-black);
+      color: var(--primary-white);
+    }
+
+    input::placeholder, textarea::placeholder { color: #ccc; }
+
+    button {
+      padding: 10px;
+      background-color: var(--primary-red);
+      color: var(--primary-white);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover { background-color: #cc0000; }
+
+    @media(max-width:768px){
+      header { flex-direction: column; align-items: flex-start; }
+      nav a { margin-left: 0; margin-right: 20px; margin-top: 10px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <h1>Dalea Wolf Creative</h1>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-    <nav id="nav-links">
-      <a href="#about">Despre</a>
+    <img src="LOGO DWC.jpg" alt="Dalea Wolf Creative">
+    <nav>
       <a href="#services">Servicii</a>
-      <a href="#portfolio">Portofoliu</a>
+      <a href="#portfolio">Proiecte</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <section id="hero">
-    <h2>Design • Video • Edit</h2>
-    <p>Transform ideile în branduri care atrag atenția. Creez conținut video și vizual care spune povestea ta autentică.</p>
-    <a href="#contact">Hai să colaborăm</a>
-  </section>
-
+  <!-- ACASĂ / DESPRE -->
   <section id="about">
-    <h2>Despre mine</h2>
-    <p>Sunt Dalea Antonia, fondatoarea Dalea Wolf Creative. Creez branduri, logo-uri, bannere și conținut video care nu doar arată bine, ci transmit emoție și personalitate. Cu pasiune pentru detalii și storytelling, transform ideile în proiecte vizuale memorabile.</p>
+    <h2>Despre</h2>
+    <p>Dalea Wolf Creative este un studio independent de design și conținut digital. Misiunea noastră este să transformăm ideile clienților în identități vizuale autentice și memorabile. Lucrăm cu pasiune, creativitate și atenție la detalii, pentru ca fiecare brand să iasă în evidență.</p>
   </section>
 
+  <!-- SERVICII -->
   <section id="services">
     <h2>Servicii</h2>
-    <div class="services-grid">
-      <div class="service"><h3>Logo Design</h3><p>Creare logo-uri personalizate, moderne și adaptate brandului tău.</p></div>
-      <div class="service"><h3>Bannere & Postări</h3><p>Design creativ pentru social media, afișe, evenimente sau reclame.</p></div>
-      <div class="service"><h3>Cărți de Vizită</h3><p>Design profesional, pregătit pentru tipar, potrivit stilului brandului tău.</p></div>
-      <div class="service"><h3>Edit Foto/Video</h3><p>Editări atent lucrate, individual sau în pachete pentru branduri și freelanceri.</p></div>
-      <div class="service"><h3>Filmare & Montaj</h3><p>Serviciu complet pentru prezentări de brand, social media sau reclame.</p></div>
-      <div class="service"><h3>Content Creator</h3><p>Pachete personalizate: conținut vizual, foto-video și branding adaptat nevoilor tale.</p></div>
+    <div class="services">
+      <div class="card">
+        <h3>🔹 LOGO DESIGN — de la 100 lei</h3>
+        <p>Creare logo personalizat pentru brandul tău, în stil modern. Ofer mai multe variante adaptate identității tale.</p>
+      </div>
+      <div class="card">
+        <h3>🔹 BANNERE & POSTĂRI — de la 100 lei</h3>
+        <p>Design creativ pentru social media, afișe, evenimente sau reclame. Disponibil individual sau în pachete lunare.</p>
+      </div>
+      <div class="card">
+        <h3>🔹 CĂRȚI DE VIZITĂ — de la 100 lei</h3>
+        <p>Design profesional, pregătit pentru tipar. Comandă individual sau ca parte din pachet complet de identitate vizuală.</p>
+      </div>
+      <div class="card">
+        <h3>🔹 EDIT — de la 100 lei</h3>
+        <p>Editare foto și video cu atenție la detalii. Disponibil individual sau în pachete personalizate pentru branduri sau freelanceri.</p>
+      </div>
+      <div class="card">
+        <h3>🔹 FILMARE & EDITARE — de la 180 lei</h3>
+        <p>Serviciu complet de filmare și montaj pentru prezentări de brand, rețele sociale sau reclame profesionale.</p>
+      </div>
+      <div class="card">
+        <h3>🔹 CONTENT CREATOR — de la 1200 lei</h3>
+        <p>Serviciu complet personalizat pentru fiecare brand, firmă sau persoană. De la conținut vizual, foto-video și branding, până la strategii de imagine.</p>
+      </div>
     </div>
   </section>
 
+  <!-- PORTOFOLIU -->
   <section id="portfolio">
-    <h2>Portofoliu</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=800&q=80" alt="Proiect 1"></div>
-      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=800&q=80" alt="Proiect 2"></div>
-      <div class="portfolio-item"><img src="https://images.unsplash.com/photo-1602524201563-8a8096b30f87?auto=format&fit=crop&w=800&q=80" alt="Proiect 3"></div>
+    <h2>Proiecte</h2>
+    <div class="portfolio">
+      <div class="card">Galerie foto/video</div>
+      <div class="card">Proiect 2</div>
+      <div class="card">Proiect 3</div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
-    <form action="https://formspree.io/f/maylqngg" method="POST">
-      <input type="text" name="nume" placeholder="Numele tău" required>
-      <input type="email" name="email" placeholder="Adresa de email" required>
-      <textarea name="mesaj" rows="5" placeholder="Mesajul tău" required></textarea>
-      <button type="submit">Trimite mesajul</button>
+    <form action="https://formspree.io/f/maylkwzb" method="POST">
+      <input type="text" name="name" placeholder="Nume" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="5" placeholder="Mesaj" required></textarea>
+      <button type="submit">Trimite</button>
     </form>
-    <p style="text-align:center; margin-top:15px;">
-      Email: <a href="mailto:daleawolfcreative@yahoo.com">daleawolfcreative@yahoo.com</a><br>
-      Telefon: +40745654577<br>
-      Instagram: <a href="https://www.instagram.com/dalea.a10/" target="_blank">@dalea.a10</a> | <a href="https://www.instagram.com/dalea_wolf_creative/" target="_blank">@dalea_wolf_creative</a><br>
-      Facebook: <a href="https://www.facebook.com/profile.php?id=61581763182903" target="_blank">Dalea Wolf Creative</a><br>
-      Oraș: Timișoara, România
-    </p>
+    <p>Email: <a href="mailto:daleawolfcreative@yahoo.com">daleawolfcreative@yahoo.com</a></p>
+    <p>Telefon: <a href="tel:+40745654577">+40745654577</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/dalea.a10/">@dalea.a10</a> / <a href="https://www.instagram.com/dalea_wolf_creative/">@dalea_wolf_creative</a></p>
+    <p>Facebook: <a href="https://www.facebook.com/profile.php?id=61581763182903">Profil Dalea Wolf Creative</a></p>
+    <p>Oraș: Timișoara, România</p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    © 2025 Dalea Wolf Creative — Toate drepturile rezervate.
+    &copy; 2025 Dalea Wolf Creative
   </footer>
 
-  <script>
-    function toggleMenu() {
-      const nav = document.getElementById('nav-links');
-      if(nav.style.display === 'flex') nav.style.display = 'none';
-      else nav.style.display = 'flex';
-      nav.style.flexDirection = 'column';
-      nav.style.background = '#000';
-      nav.style.padding = '15px 0';
-      nav.style.position = 'absolute';
-      nav.style.top = '60px';
-      nav.style.left = '0';
-      nav.style.width = '100%';
-    }
-  </script>
 </body>
 </html>
